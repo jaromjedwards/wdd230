@@ -1,0 +1,45 @@
+body {
+    font-family: 'Rock Salt', cursive;
+}
+
+h1 {
+    font-family: 'Cutive', sans-serif;
+}
+
+.profilePicture {
+    width: 100px;
+}
+
+nav {
+    background-color: #243447;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+nav ul {
+    list-style-type: none;
+
+}
+
+nav a {
+    display: block;
+    color: #493267;
+    text-align: center;
+    padding: 1rem;
+    text-decoration: none;
+}
+
+nav a:hover {
+    border: 1px solid white;
+}
+main{
+    max-width: 800px;
+    text-align: center;
+}
+main ul{
+    display: grid;
+}
+main section{
+    display: grid;
+    grid-template-columns: 1;
+}

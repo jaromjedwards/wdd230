@@ -2,44 +2,54 @@ body {
     font-family: 'Rock Salt', cursive;
 }
 
+header{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
 h1 {
     font-family: 'Cutive', sans-serif;
+    font-size: 75px;
+    grid-row: 1;
+    align-self: end;
+
 }
 
 .profilePicture {
-    width: 100px;
+    width: 300px;
+    border-radius: 50px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: lightblue;
+    grid-row: 1;
 }
 
 nav {
-    background-color: #243447;
-    margin: 0 auto;
-    max-width: 800px;
-}
-
-nav ul {
-    list-style-type: none;
-
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    background-color: lightblue;
+    text-align: center;
 }
 
 nav a {
-    display: block;
     color: #493267;
     text-align: center;
-    padding: 1rem;
+    padding: 50px;
     text-decoration: none;
 }
 
 nav a:hover {
     border: 1px solid white;
 }
-main{
-    max-width: 800px;
+
+h2{
     text-align: center;
 }
-main ul{
+main{
     display: grid;
+    grid-template-columns: 50% 50%;
 }
-main section{
-    display: grid;
-    grid-template-columns: 1;
+.card{
+    text-align: center;
 }

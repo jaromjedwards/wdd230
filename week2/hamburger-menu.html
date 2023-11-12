@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        header {
+            background-color: #333;
+            padding: 15px;
+            color: white;
+            text-align: center;
+        }
+
+        nav {
+            display: none;
+            background-color: #111;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            display: block;
+        }
+
+        #menu-icon {
+            display: none;
+            cursor: pointer;
+        }
+
+        @media screen and (max-width: 600px) {
+            nav {
+                display: block;
+            }
+
+            nav a {
+                display: block;
+                padding: 10px;
+            }
+
+            #menu-icon {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <span id="menu-icon">&#9776; Menu</span>
+        <h1>Responsive Hamburger Menu</h1>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var menuIcon = document.getElementById('menu-icon');
+            var nav = document.querySelector('nav');
+
+            menuIcon.addEventListener('click', function () {
+                // Toggle the visibility of the navigation menu
+                nav.style.display = (nav.style.display === 'block') ? 'none' : 'block';
+            });
+        });
+    </script>
+
+</body>
+</html>

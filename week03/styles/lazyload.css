@@ -1,0 +1,7 @@
+.images{
+    width: 400px;
+    height: 600px;
+    display: block;
+    background: black;
+    animation: fade 15s;    
+}

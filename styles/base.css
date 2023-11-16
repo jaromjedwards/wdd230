@@ -45,6 +45,7 @@ nav a:hover {
 
 h2{
     text-align: center;
+    background-color: bisque;
 }
 main{
     display: grid;
@@ -52,4 +53,5 @@ main{
 }
 .card{
     text-align: center;
+    background-color: lightblue;
 }

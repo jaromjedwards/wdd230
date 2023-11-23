@@ -1,9 +1,21 @@
 @media screen and (max-width: 840px) {
-    nav {
-      flex-direction: column; /* Horizontally aligned on larger screens */
-    }
-    main{
-        display: grid;
-        grid-template-columns: 100%;
-    }
+
+  header{
+    grid-template-columns: 1fr;
+  }
+
+  .profile-picture{
+    justify-self: center;
+  }
+  nav{
+    margin-left: 50px;
+  }
+
+  main{
+    grid-template-columns: 1fr;
+  }
+
+  .card{
+    grid-column: 1;
+  }
 }

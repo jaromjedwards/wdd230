@@ -1,0 +1,36 @@
+body.dark{
+    background-color: black;
+}
+.dark header{
+    background: linear-gradient(#420039, black);
+}
+
+.dark h1{
+    color: white;
+}
+
+.dark nav a{
+    color: #A2A3BB;
+}
+
+.dark .card{
+    border-color: #A2A3BB;
+    color: white;
+}
+
+.dark h2{
+    color: white;
+}
+
+.dark .assignments a{
+    color: white;
+}
+.dark .assignments{
+    color: white;
+}
+
+.dark footer{
+    background-color: #420039;
+    color: white;
+}
+

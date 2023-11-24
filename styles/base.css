@@ -31,13 +31,15 @@ h1 {
     border-color: black;
     justify-self: end;
     align-self: center;
+    margin: 15px 0;
 }
 
 nav{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    display: flex;
+    justify-content: space-between;
     margin-left: 20px;
     align-self: center;
+    padding: 20px 40px;
 }
 
 nav a {
@@ -52,6 +54,8 @@ nav a:hover {
 h2{
     grid-column: 1 / span 2;
     text-align: center;
+    margin: 50px 0;
+    font-size: 50px;
 }
 main{
     display: grid;
@@ -65,13 +69,9 @@ main{
     margin: 20px;
 }
 
-h2{
-    font-size: 50px;
-    margin-bottom: 0;
-}
-
 .titles{
     font-size: 30px;
+    margin: 50px 0;
 }
 
 .assignments{
@@ -81,6 +81,7 @@ h2{
     flex-direction: column;
     gap: 20px;
     color: black;
+    margin-bottom: 50px;
 
 }
 
@@ -90,5 +91,19 @@ h2{
 }
 
 footer{
-    background-color: #A2A3BB; 
+    background-color: #A2A3BB;
+    padding: 20px;
+}
+
+footer p{
+    padding: 10px;
+}
+
+.hamburger-menu{
+    display: none;
+}
+
+#dark-mode-button{
+    width: 50px;
+    position: absolute;
 }

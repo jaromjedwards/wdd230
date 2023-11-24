@@ -6,15 +6,17 @@
     <title>Jarom Edwards - WDD 230 - Web Frontend Development</title>
     <meta name="author" content="Jarom Edwards">
     <meta name="description" content="WDD 230 - Web Frontend Development - Jarom Edwards - course assigment portal">
+    <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/dark-mode.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rock+Salt&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cutive&display=swap">
-    <link rel="icon" href="images/lantn-logo.png" type="image/x-icon" />
+    <link rel="icon" href="images/lantn-logo.png" type="image/x-icon">
 
         <!--  Essential META Tags -->
         <meta property="og:title" content="WDD230 - Jarom Edwards">
-        <meta property="og:type" content="website" />
+        <meta property="og:type" content="website">
         <meta property="og:image" content="https://media.gettyimages.com/id/1147233225/photo/monument-valley-in-arizona.jpg?s=2048x2048&w=gi&k=20&c=_pEeaGiVLEo6R9zMmSnE23qFk1WMIfSYxfH81mU7hb8=">
         <meta property="og:url" content="https://jaromjedwards.github.io/wdd230/"> 
         <!-- <meta name="twitter:card" content="summary_large_image">  -->
@@ -29,14 +31,16 @@
         <meta name="twitter:site" content="@website-username"> -->
 </head>
 
-<body>
+<body class="dark-mode">
     <header> 
+        <button id="dark-mode-button" onclick="handleDarkMode()">Dark Mode: On</button>
         <img class="profile-picture" src="images/profile_head.jpg" alt="profile picture">
-        <h1>Jarom Edwards</h1>
-        <nav>
+        <h1>Jarom Edwards</h1> 
+        <button id="j-hamburger-menu" class="hamburger-menu" onclick="handleMenuClick()"> ☰ </button>
+        <nav class="hidden" id="menu">
             <a class="links" href="#">Home</a>
             <a class="links" href="chamber/index.html">Chamber</a>
-            <a href="links" href="#">Some</a>
+            <a class="links" href="#">Some</a>
             <a class="links" href="#">Site Plan</a>
             <a class="links" href="#">Form</a>
         </nav>
@@ -68,5 +72,6 @@
         <p id="lastModified">Last Modified</p>
     </footer>
     <script src="scripts/getDates.js"></script>
+    <script src="scripts/hamburger-menu.js"></script>
 </body>
 </html>

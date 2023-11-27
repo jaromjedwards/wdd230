@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Jarom Edwards - WDD 230 - Web Frontend Development</title>
+        <meta name="author" content="Jarom Edwards">
+        <meta name="description" content="WDD 230 - Web Frontend Development - Jarom Edwards - course assigment portal">
+        <link rel="stylesheet" href="styles/reset.css">
+        <link rel="stylesheet" href="styles/base.css">
+        <link rel="stylesheet" href="styles/larger.css">
+        <link rel="stylesheet" href="styles/dark-mode.css">
+
+        <link rel="stylesheet" href="styles/form.css">
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rock+Salt&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cutive&display=swap">
+        <link rel="icon" href="images/lantn-logo.png" type="image/x-icon">
+    
+            <!--  Essential META Tags -->
+            <meta property="og:title" content="WDD230 - Jarom Edwards">
+            <meta property="og:type" content="website">
+            <meta property="og:image" content="https://media.gettyimages.com/id/1147233225/photo/monument-valley-in-arizona.jpg?s=2048x2048&w=gi&k=20&c=_pEeaGiVLEo6R9zMmSnE23qFk1WMIfSYxfH81mU7hb8=">
+            <meta property="og:url" content="https://jaromjedwards.github.io/wdd230/"> 
+            <!-- <meta name="twitter:card" content="summary_large_image">  -->
+    
+            <!--  Non-Essential, But Recommended -->
+            <!-- <meta property="og:description" content="Offering tour packages for individuals or groups.">
+            <meta property="og:site_name" content="European Travel, Inc.">
+            <meta name="twitter:image:alt" content="Alt text for image"> -->
+    
+            <!--  Non-Essential, But Required for Analytics -->
+            <!-- <meta property="fb:app_id" content="your_app_id" />
+            <meta name="twitter:site" content="@website-username"> -->
+    </head>
+<body>
+    <header> 
+        <button id="dark-mode-button" onclick="handleDarkMode()">Dark Mode: On</button>
+        <img class="profile-picture" src="images/profile_head.jpg" alt="profile picture">
+        <h1>Jarom Edwards</h1> 
+        <button id="j-hamburger-menu" class="hamburger-menu" onclick="handleMenuClick()"> ☰ </button>
+        <nav class="hidden" id="menu">
+            <a class="links" href="#">Home</a>
+            <a class="links" href="chamber/index.html">Chamber</a>
+            <a class="links" href="#">Some</a>
+            <a class="links" href="#">Site Plan</a>
+            <a class="links" href="#">Form</a>
+        </nav>
+    </header>
+    <main>
+        <form id="myForm" action="record.html" method="get">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required pattern="[a-zA-Z0-9]{8,}" title="Password must be at least 8 characters and alphanumeric">
+
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@byui\.edu$" title="Please enter a valid email address">
+
+            <label for="pageRating">Page Rating:</label>
+            <input type="range" id="pageRating" name="pageRating" min="1" max="10" step="1">
+            <span id="ratingValue">0</span>
+
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+    <footer>
+        <p id="year"></p>
+        <p id="lastModified">Last Modified</p>
+    </footer>
+
+    <script src="scripts/getDates.js" ></script>
+    <script src="scripts/hamburger-menu.js" ></script>
+    <script src="scripts/dark-mode.js" ></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Function to handle form submission
+            document.getElementById("myForm").addEventListener("submit", function (event) {
+                // Get password and confirm password values
+                var password = document.getElementById("password").value;
+                var confirmPassword = document.getElementById("confirmPassword").value;
+    
+                // Check if passwords match
+                if (password !== confirmPassword) {
+                    // Prevent form submission
+                    event.preventDefault();
+    
+                    // Display error message
+                    alert("Passwords do not match. Please enter matching passwords.");
+    
+                    // Reset password fields
+                    document.getElementById("password").value = "";
+                    document.getElementById("confirmPassword").value = "";
+                }
+            });
+    
+            // Function to update the password confirmation field on input
+            document.getElementById("confirmPassword").addEventListener("input", function () {
+                var password = document.getElementById("password").value;
+                var confirmPassword = document.getElementById("confirmPassword").value;
+    
+                // Get the elements for styling
+                var passwordField = document.getElementById("password");
+                var confirmPasswordField = document.getElementById("confirmPassword");
+    
+                // Check if passwords match
+                if (password === confirmPassword) {
+                    // Remove any previous error styling
+                    passwordField.style.border = "1px solid #ccc";
+                    confirmPasswordField.style.border = "1px solid #ccc";
+                } else {
+                    // Apply error styling
+                    passwordField.style.border = "1px solid red";
+                    confirmPasswordField.style.border = "1px solid red";
+                }
+            });
+        });
+    </script>
+    
+
+</body>
+</html>

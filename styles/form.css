@@ -1,0 +1,42 @@
+:root {
+    --form-background: #f0f0f0;
+    --form-text-color: #333;
+    --form-border: 1px solid #ccc;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--form-background);
+    color: var(--form-text-color);
+}
+
+main {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border: var(--form-border);
+    border-radius: 8px;
+}
+
+form {
+    display: grid;
+    gap: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input,
+button {
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#ratingValue {
+    display: inline-block;
+    margin-left: 10px;
+}

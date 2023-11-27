@@ -3,6 +3,7 @@ window.onload = function() {
     // call functions
     getYear();
     lastModified();
+    getTime();
   };
   
   
@@ -19,4 +20,16 @@ function lastModified(){
   let date = lastModified.toLocaleDateString();
   const lastModifiedElement = document.getElementById('lastModified');
   lastModifiedElement.innerText = `Last Modified: ${date}`;
+}
+
+function getTime(){
+  let currentDate = new Date();
+
+  var hours = currentDate.getHours();
+  var minutes = currentDate.getMinutes();
+  var seconds = currentDate.getSeconds();
+
+  const currentTimeElement = document.getElementById('current-time');
+  currentTimeElement.innerText = `Form Loaded at ${hours}:${minutes}:${seconds}`;
+
 }

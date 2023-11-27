@@ -222,3 +222,45 @@ footer{
     transform: translateY(-5px);
 }
 
+.join-main{
+    display: grid;
+    grid-template-columns: 1.5fr 4fr;
+    padding-top: 175px;
+}
+
+.form{
+    grid-column: 1;
+    
+}
+
+.membership-cards{
+    display: flex;
+    flex-direction: row;
+    padding: 30px;
+    gap: 10px;
+    padding-top: 0;
+}
+
+.membership-cards div{
+    border-style: solid;
+    border-width: 1px;
+    text-align: center;
+    border-radius: 10%;
+}
+
+.membership-cards div:hover{
+    color:  #E6AA68;
+    background-color: #242038;
+    transform: translateY(-7px);
+
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.description-box{
+    height: 40px;
+}

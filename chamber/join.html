@@ -30,7 +30,7 @@
         <meta name="twitter:site" content="@website-username"> -->
 </head>
 <body>
-    <header>
+    <header class="join-header">
         <img class="logo" src="images/coolidge-logo.jpeg" alt="logo">
         <h1>Coolidge Chamber of Commerce</h1>
         <nav>
@@ -40,8 +40,105 @@
             <a href="join.html">Join</a>
         </nav>
     </header>
-    <main>
+    <main class="join-main">
+        <form class="form" method="get" action="thankyou.html">
+            <fieldset>
+                <label>First Name 
+                    <input type="text" name="first-name" id="first-name" required></label><br>
+                <label>Last Name 
+                    <input type="text" name="last-name" id="last-name" required></label><br>
+                <label for="position">Applicant's Position: 
+                    <input type="text" id="position" name="position" pattern="^[a-zA-Z\- ]{7,}$" required></label><br>
+                <label for="email">Email Address:
+                    <input type="email" id="email" name="email" placeholder="example@example.com" required></label><br>
+                <label for="mobile">Mobile Phone Number:
+                    <input type="tel" id="mobile" name="mobile" placeholder="1235551234" required></label><br>
+                    <label for="organization">Business/Organization's Name:
+                    <input type="text" id="organization" name="organization" required></label><br>
+            </fieldset>
+            <fieldset>
+                <label>Membership Level
+                    <select name="subject" id="">
+                            <option value="">Select a Membership Level</option>
+                        <option value="">Non-Profit Membership</option>
+                        <option value="">Bronze Membership</option>
+                        <option value="">Silver Membership</option>
+                        <option value="">Gold Membership</option>
+                    </select>
+                </label>
 
+                <label> Description of business/organization<input class="description-box" type="text" name="description"></label>
+            </fieldset>
+            <fieldset>
+                <p id="current-time"></p>
+                <button onclick="window.location.href='thankyou.html'">Join</button>
+            </fieldset>
+        </form>
+
+        <section class="membership-cards">
+            <div>
+                <h2>NP Membership</h2>
+                <p>
+                    <strong>Cost:</strong> Free
+                </p>
+                <p>
+                    <strong>Benefits:</strong>
+                </p>
+                <ul>
+                    <li>Listing on the website</li>
+                    <li>Access to community forums</li>
+                    <li>Quarterly newsletters</li>
+                </ul>
+            </div>
+            
+            <div>
+                <h2>Bronze Membership</h2>
+                <p>
+                    <strong>Cost:</strong> $50 per month
+                </p>
+                <p>
+                    <strong>Benefits:</strong>
+                </p>
+                <ul>
+                    <li>All NP Membership benefits</li>
+                    <li>Featured in newsletter</li>
+                    <li>10% discount on events and training</li>
+                </ul>
+            </div>
+            
+            <div>
+                <h2>Silver Membership</h2>
+                <p>
+                    <strong>Cost:</strong> $100 per month
+                </p>
+                <p>
+                    <strong>Benefits:</strong>
+                </p>
+                <ul>
+                    <li>All Bronze Membership benefits</li>
+                    <li>Priority listing on the website</li>
+                    <li>Access to exclusive webinars and workshops</li>
+                </ul>
+            </div>
+            
+            <div>
+                <h2>Gold Membership</h2>
+                <p>
+                    <strong>Cost:</strong> $200 per month
+                </p>
+                <p>
+                    <strong>Benefits:</strong>
+                </p>
+                <ul>
+                    <li>All Silver Membership benefits</li>
+                    <li>Spotlight position on the home page</li>
+                    <li>Complimentary event tickets</li>
+                    <li>Personalized consultation with experts</li>
+                </ul>
+            </div>
+            
+        </section>
+        
     </main>
     <footer>
         <p id="year"></p>

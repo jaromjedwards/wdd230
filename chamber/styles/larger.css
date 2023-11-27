@@ -1,0 +1,37 @@
+@media screen and (max-width: 840px) {
+
+
+    .discover-sidebar{
+        grid-column: 2;
+        grid-row: 2;
+        position: relative;
+        display: grid;
+        margin-top: 0;
+    }
+
+    .discover-sidebar p{
+        grid-row: 1;
+    }
+
+    .discover-sidebar img{
+        grid-row: 2;
+        width: 150px;
+    }
+
+    .discover-images{
+        padding-right: 100px;
+    }
+    .discover-images p{
+        margin-left: 300px;
+    }
+
+    .discover-main h2{
+        margin: 100px;
+    }
+
+    .discover-images img:hover{
+        transform: none;
+    }
+
+
+}

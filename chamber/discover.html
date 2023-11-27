@@ -8,63 +8,71 @@
     <meta name="description" content="WDD 230 - Web Frontend Development - Jarom Edwards - Chamber of Commerce Website">
     <link rel="stylesheet" href="styles/bass.css">
     <link rel="stylesheet" href="styles/larger.css">
-
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rock+Salt&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cutive&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Gilda+Display&display=swap">
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Gilda+Display?query=gilda">
     <link rel="icon" href="images/lantn-logo.png" type="image/x-icon">
-    <meta property="og:title" content="WDD230 - Chamber of Commerce">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://media.gettyimages.com/id/1147233225/photo/monument-valley-in-arizona.jpg?s=2048x2048&w=gi&k=20&c=_pEeaGiVLEo6R9zMmSnE23qFk1WMIfSYxfH81mU7hb8=">
-    <meta property="og:url" content="https://jaromjedwards.github.io/wdd230/chamber/index.html"> 
+
+        <!--  Essential META Tags -->
+        <meta property="og:title" content="WDD230 - Chamber of Commerce">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="https://media.gettyimages.com/id/1147233225/photo/monument-valley-in-arizona.jpg?s=2048x2048&w=gi&k=20&c=_pEeaGiVLEo6R9zMmSnE23qFk1WMIfSYxfH81mU7hb8=">
+        <meta property="og:url" content="https://jaromjedwards.github.io/wdd230/chamber/index.html"> 
+        <!-- <meta name="twitter:card" content="summary_large_image">  -->
+
+        <!--  Non-Essential, But Recommended -->
+        <!-- <meta property="og:description" content="Offering tour packages for individuals or groups.">
+        <meta property="og:site_name" content="European Travel, Inc.">
+        <meta name="twitter:image:alt" content="Alt text for image"> -->
+
+        <!--  Non-Essential, But Required for Analytics -->
+        <!-- <meta property="fb:app_id" content="your_app_id" />
+        <meta name="twitter:site" content="@website-username"> -->
 </head>
 <body>
     <header>
-        <img class="logo" src="images/coolidge-logo.jpeg" alt="Coolidge Chamber of Commerce logo">
+        <img class="logo" src="images/coolidge-logo.jpeg" alt="logo">
         <h1>Coolidge Chamber of Commerce</h1>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="discover.html">Discover</a>
-            <a href="directory.html">Directory</a>
-            <a href="join.html">Join</a>
+            <a href="">Home</a>
+            <a href="">Discover</a>
+            <a href="">Directory</a>
+            <a href="">Join</a>
         </nav>
     </header>
-    <div class="container">
-        <aside class="sidebar">
-            <!-- Sidebar content (demographics, statistical data, events, attractions, or a calendar) goes here -->
-            <!-- Use JavaScript to dynamically display the appropriate message based on the user's visit -->
-        </aside>
-
-        <main class="main-content">
-            <!-- Local photos of interest with lazy loading and hover effects go here -->
-            <figure>
-                <img class="sidebar-image" src="images/History-04.jpg" alt="Caption 1">
-                <figcaption>Caption 1</figcaption>
-            </figure>
-            <figure>
-                <img class="sidebar-image" src="images/Coffee-w-friends.jpg" alt="Caption 2">
-                <figcaption>Caption 2</figcaption>
-            </figure>
-            <figure>
-                <img class="sidebar-image" src="images/Ruins-05.jpg" alt="Caption 3">
-                <figcaption>Caption 3</figcaption>
-            </figure>
-            <figure>
-                <img class="sidebar-image" src="images/Pita-Patio-footage.00_00_25_09.Still006.jpg" alt="Caption 4">
-                <figcaption>Caption 4</figcaption>
-            </figure>
-            <figure>
-                <img class="sidebar-image" src="images/ruins-cutout.png" alt="Caption 5">
-                <figcaption>Caption 5</figcaption>
-            </figure>
-            <figure>
-                <img class="sidebar-image" src="images/Gem-Mus-03.jpg" alt="Caption 6">
-                <figcaption>Caption 6</figcaption>
-            </figure>
-        </main>        
-    </div>
-    <footer></footer> 
-    <!-- Add the script tag to reference the JavaScript file -->
-    <script src="scripts/discover.js"></script>
+    <main class="discover-main">
+        <div class="discover-images">
+            <h2>Your adventure starts here</h2>
+            <img src="images/Coffee-w-friends.jpg" alt="" loading="lazy">
+                <p>Enjoy coffee with friends at the Galloping Goose!</p>
+                <a href="https://www.facebook.com/gallopingoose/" target="_blank">Learn More</a>
+            <img  src="images/Gem-Mus-03.jpg" alt="" loading="lazy">
+                <p>See our unique collection at the Rock Museum!</p>
+                <a href="https://pinalgeologymuseum.org/" target="_blank">Learn More</a>
+            <img src="images/Pita-Patio-footage.00_00_25_09.Still006.jpg" alt="" loading="lazy">
+                <p>Savor the flavors at Pita Patio!</p>
+                <a href="https://www.facebook.com/p/Pita-Patio-Grill-Events-100050831271060/?paipv=0&eav=AfZXXVD6qWNWUqON71UnhKJvwZrUoXO4hoNnmDPJ0GBxnKbzRi8iKsitxlqZqVxMep8&_rdr" target="_blank">Learn More</a>
+            <img src="images/Ruins-05.jpg" alt="" loading="lazy">
+                <p>Visit Casa Grande Ruins National Monument!</p>
+                <a href="https://www.nps.gov/cagr/index.htm" target="_blank">Learn More</a>
+            <img src="images/History-04.jpg" alt="" loading="lazy">
+                <p>Learn about Coolidge's vast history!</p>
+                <a href="https://www.nps.gov/cagr/index.htm" target="_blank">Learn More</a>
+            <img src="images/casa-grande-ruins.jpeg" alt="" loading="lazy">
+                <p>And much more!</p>
+                <a href="https://www.nps.gov/cagr/index.htm" target="_blank">Learn More</a>
+        </div>
+        <div class="discover-sidebar">
+            <p onload="displayMessage(message)" id="welcome-message">A</p>
+            <img src="images/statistics_museums.png" alt="museums">
+            <img src="images/statistics_other.png" alt="other">
+            <img src="images/statistics_schools.png" alt="schools">
+        </div>
+    </main>
+    <footer>
+        <p id="year"></p>
+        <p id="lastModified"></p>
+    </footer>
+    <script src="scripts/getDates.js"></script>
+    <script src="scripts/timeBetweenVisits.js"></script>
 </body>
-</html>

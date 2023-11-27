@@ -1,0 +1,18 @@
+{
+    "familyName" : "Edwards",
+    "movedDate" : "07-15-2022",
+    "familySize" : "2",
+    "visitedByBishopric" : "No",
+    "members" : [
+        {
+            "name" : "Kayla Edwards",
+            "Gender" : "F",
+            "Birthdate" : "05-19-1995"
+        },
+        {
+            "name" : "Jarom Edwards",
+            "Gender" : "M",
+            "Birthdate" : "03-29-1999"
+        }
+    ]
+}

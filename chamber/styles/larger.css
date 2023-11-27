@@ -33,5 +33,9 @@
         transform: none;
     }
 
+    .membership-cards{
+        flex-direction: column;
+        width: 400px;
+    }
 
 }

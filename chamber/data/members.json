@@ -1,7 +1,67 @@
 {
-    "companies"{
+    "companies": [
         {
-            "name"
+            "name": "Quantum Innovations",
+            "address": "42 Hyperspace Lane",
+            "phone": "555-1234-5678",
+            "url": "quantuminnovations.com",
+            "icon": "quantum_icon.png",
+            "membership": "NP",
+            "years": "3"
+        },
+        {
+            "name": "Celestial Solutions",
+            "address": "9 Nebula Street",
+            "phone": "555-9876-5432",
+            "url": "celestial-solutions.net",
+            "icon": "celestial_icon.png",
+            "membership": "Bronze",
+            "years": "2"
+        },
+        {
+            "name": "Stellar Systems Ltd.",
+            "address": "7 Galaxy Avenue",
+            "phone": "555-5678-1234",
+            "url": "stellar-systems.org",
+            "icon": "stellar_icon.png",
+            "membership": "Silver",
+            "years": "4"
+        },
+        {
+            "name": "Ecliptic Technologies",
+            "address": "12 Moonlight Drive",
+            "phone": "555-4321-8765",
+            "url": "ecliptic-tech.com",
+            "icon": "ecliptic_icon.png",
+            "membership": "Gold",
+            "years": "6"
+        },
+        {
+            "name": "Nebula Dynamics",
+            "address": "5 Starlight Lane",
+            "phone": "555-8765-4321",
+            "url": "nebula-dynamics.io",
+            "icon": "nebula_icon.png",
+            "membership": "NP",
+            "years": "1"
+        },
+        {
+            "name": "Quantum Forge Innovations",
+            "address": "28 Wormhole Road",
+            "phone": "555-2345-6789",
+            "url": "quantum-forge-innovations.com",
+            "icon": "forge_icon.png",
+            "membership": "Bronze",
+            "years": "5"
+        },
+        {
+            "name": "Cosmic Creations",
+            "address": "33 Infinity Boulevard",
+            "phone": "555-6789-2345",
+            "url": "cosmiccreations.biz",
+            "icon": "cosmic_icon.png",
+            "membership": "Gold",
+            "years": "2"
         }
-    }
+    ]
 }

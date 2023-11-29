@@ -67,6 +67,7 @@ main{
     border-style: solid;
     border-width: 5px;
     margin: 20px;
+    padding: 40px;
 }
 
 .titles{
@@ -74,20 +75,17 @@ main{
     margin: 50px 0;
 }
 
-.assignments{
-    list-style-type: none;
+.assignments h1{
     font-family: 'Cutive', sans-serif;
     display: flex;
     flex-direction: column;
-    gap: 20px;
     color: black;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 
 }
 
 .assignments a{
     text-decoration: none;
-    color: black;
 }
 
 footer{
@@ -106,4 +104,13 @@ footer p{
 #dark-mode-button{
     width: 50px;
     position: absolute;
+}
+
+.weather-information{
+    font-family: 'Courier New', Courier, monospace;
+    border-style: solid;
+    border-width: 5px;
+    background-color: #F5F9E9;
+    padding: 30px;
+    margin: 0 100px;
 }

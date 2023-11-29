@@ -19,25 +19,23 @@ const displayWeeks = (weeks) => {
 weeks.forEach((week) => {
 
         // card
-        const card = document.createElement('section');
-        card.setAttribute('class', 'card')
+        const assignment = document.createElement('section');
+        assignment.setAttribute('class', 'assignments')
+
+         // Title
+        const weekTitle = document.createElement('h1');
 
         // URL
-        const weekURL = document.createElement('p');
-        weekURL.textContent = `URL: ${week.url}`;
-        weekURL.setAttribute('class', 'week-url');
+        const weekURL = document.createElement('a');
+        weekURL.textContent = `${week.links[0].title}`;
+        weekURL.setAttribute('href', week.links[0].url);
 
-        // Title
-        const weekTitle = document.createElement('h2');
-        weekTitle.textContent = `Title: ${week.title}`;
-        weekTitle.setAttribute('class', 'week-title');
 
-        card.appendChild(weekURL);
-        card.appendChild(weekTitle);
-
+        weekTitle.appendChild(weekURL);
+        assignment.appendChild(weekTitle);
 
         // Append the card to the #cards container
-        cards.appendChild(card);
+        cards.appendChild(assignment);
 
 });
 }

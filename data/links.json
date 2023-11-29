@@ -1,19 +1,6 @@
 {
     "weeks":[
         {
-            "week": "Week 1",
-            "links": [
-                {
-                    "url": "",
-                    "title": ""
-                },
-                {
-                    "url": "",
-                    "title": ""
-                }
-            ]
-        },
-        {
             "week": "Week 2",
             "links":[
                 {

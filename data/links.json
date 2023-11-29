@@ -1,0 +1,65 @@
+{
+    "weeks":[
+        {
+            "week": "Week 1",
+            "links": [
+                {
+                    "url": "",
+                    "title": ""
+                },
+                {
+                    "url": "",
+                    "title": ""
+                }
+            ]
+        },
+        {
+            "week": "Week 2",
+            "links":[
+                {
+                    "url": "week2/design.html",
+                    "title": "Week 02: Design"
+                }
+            ]
+        },
+        {
+            "week": "Week 3",
+            "links":[
+                {
+                    "url": "week03/images/landscape.webp",
+                    "title": "Week 03: WebP"
+                },
+                {
+                    "url": "week03/lazyload.html",
+                    "title": "Week 03: Lazy Loading"
+                }
+            ]
+        },
+        {
+            "week": "Week 4",
+            "links":[
+                {
+                    "url": "form.html",
+                    "title": "Week 04: Forms"
+                }
+            ]
+        },
+        {
+            "week": "Week 5",
+            "links":[
+                {
+                    "url": "https://codepen.io/jaromjedwards/pen/XWOBEqR",
+                    "title": "Week 05: Pseudo Elements"
+                },
+                {
+                    "url": "week05/new-ward-members.json",
+                    "title": "Week 05: New Ward Members"
+                },
+                {
+                    "url": "week05/prophets.html",
+                    "title": "Week 05: Prophets"
+                }
+            ]
+        }
+    ]
+}

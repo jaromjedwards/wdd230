@@ -28,6 +28,7 @@ const displayMembers = (companies) => {
       // card
       const sectionElement = document.createElement('section');
       sectionElement.setAttribute('class', 'members')
+      sectionElement.setAttribute('id', 'members')
 
       // Name
       const companyName = document.createElement('h1');

@@ -30,6 +30,15 @@ weeks.forEach((week) => {
         weekURL.textContent = `${week.links[0].title}`;
         weekURL.setAttribute('href', week.links[0].url);
 
+        week.links.forEach((link) => {
+          const linkElement = document.createElement('a');
+          linkElement.textContent = link.title;
+          linkElement.setAttribute('href', link.url);
+    
+          // Append link elements to the assignment card
+          assignment.appendChild(linkElement);
+        });
+
 
         weekTitle.appendChild(weekURL);
         assignment.appendChild(weekTitle);
@@ -37,7 +46,7 @@ weeks.forEach((week) => {
         // Append the card to the #cards container
         cards.appendChild(assignment);
 
-});
+  });
 }
 
 getData(url2);

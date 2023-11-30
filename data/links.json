@@ -5,7 +5,7 @@
             "links":[
                 {
                     "url": "week2/design.html",
-                    "title": "Week 02: Design"
+                    "title": "Design"
                 }
             ]
         },
@@ -14,11 +14,11 @@
             "links":[
                 {
                     "url": "week03/images/landscape.webp",
-                    "title": "Week 03: WebP"
+                    "title": "WebP"
                 },
                 {
                     "url": "week03/lazyload.html",
-                    "title": "Week 03: Lazy Loading"
+                    "title": "Lazy Loading"
                 }
             ]
         },
@@ -27,7 +27,7 @@
             "links":[
                 {
                     "url": "form.html",
-                    "title": "Week 04: Forms"
+                    "title": "Forms"
                 }
             ]
         },
@@ -36,15 +36,15 @@
             "links":[
                 {
                     "url": "https://codepen.io/jaromjedwards/pen/XWOBEqR",
-                    "title": "Week 05: Pseudo Elements"
+                    "title": "Pseudo Elements"
                 },
                 {
                     "url": "week05/new-ward-members.json",
-                    "title": "Week 05: New Ward Members"
+                    "title": "New Ward Members"
                 },
                 {
                     "url": "week05/prophets.html",
-                    "title": "Week 05: Prophets"
+                    "title": "Prophets"
                 }
             ]
         }

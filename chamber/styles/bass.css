@@ -297,3 +297,10 @@ ul {
     background-color: #065dd8;
     transform: translateY(-2px);
 }
+
+.directory-cards-container{
+    padding: 200px 100px 0 100px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+}

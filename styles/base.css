@@ -15,7 +15,7 @@ header{
 
 }
 
-h1 {
+.name {
     font-family: 'Cutive', sans-serif;
     font-size: 40px;
     align-self: end;
@@ -68,24 +68,27 @@ main{
     border-width: 5px;
     margin: 20px;
     padding: 40px;
+
 }
 
-.titles{
-    font-size: 30px;
-    margin: 50px 0;
+.assignments{
+    display: grid;
+    grid-template-columns: 1fr;
+    font-size: 20px;
 }
 
 .assignments h1{
     font-family: 'Cutive', sans-serif;
-    display: flex;
-    flex-direction: column;
     color: black;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
+    
 
 }
 
 .assignments a{
     text-decoration: none;
+    color: blue;
+
 }
 
 footer{
@@ -114,3 +117,4 @@ footer p{
     padding: 30px;
     margin: 0 100px;
 }
+

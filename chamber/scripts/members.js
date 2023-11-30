@@ -51,6 +51,7 @@ const displayMembers = (companies) => {
       const companyIcon = document.createElement('img');
       companyIcon.src = company.icon;
       companyIcon.alt = `${company.name} Icon`;
+      companyIcon.setAttribute('class', 'icons')
 
       // Membership
       const companyMembership = document.createElement('p');

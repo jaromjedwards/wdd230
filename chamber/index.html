@@ -29,7 +29,7 @@
         <!-- <meta property="fb:app_id" content="your_app_id" />
         <meta name="twitter:site" content="@website-username"> -->
 </head>
-<body>
+<body onload="getYear()" onload="lastModified()">
     <header id="header">
         <img class="logo" src="images/coolidge-logo.jpeg" alt="logo">
         <h1>Coolidge Chamber of Commerce</h1>
@@ -40,7 +40,7 @@
             <a href="join.html">Join</a>
         </nav>
     </header>
-        <img class="hero-image" src="images/casa-grande-ruins.jpeg" alt="hero-image">
+        <img class="hero-image" src="images/coolidge_city_hall.jpeg" alt="hero-image">
     <main>
         <div class="top">
             <p class="moving-coolidge">Moving Coolidge forward as the voice of local business.</p>
@@ -58,8 +58,18 @@
                 <p>Spotlight 2</p>
                 <p>Spotlight 3</p>
             </section>
+            <div id="weather-card">
+                
+            </div>
             <section class="weather-card">
-                <img src="#" alt="weather-card">
+                <p id="current-temp"></p>
+                <img id="weather-icon" src="transparent.png" alt="javascript image">
+                <p id="figcaption"></p>
+            </section>
+            <section class="weather-card">
+                <p id="current-temp-five"></p>
+                <img id="weather-icon-five" src="transparent.png" alt="javascript image">
+                <p id="figcaption-five"></p>
             </section>
         </div>
     </main>
@@ -68,5 +78,7 @@
         <p id="lastModified"></p>
     </footer>
     <script src="scripts/getDates.js"></script>
-    <script src="scripts/header.js" ></script>
+    <script src="scripts/header.js"></script>
+    <script src="scripts/coolidgeWeather.js"></script>
+
 </body>

@@ -1,12 +1,3 @@
-window.onload = function() {
-    console.log('Page is loaded');
-    // call functions
-    getYear();
-    lastModified();
-    getTime();
-  };
-  
-  
 function getYear() {
   const currentDate = new Date();
   const currentYear = currentDate.getFullYear();

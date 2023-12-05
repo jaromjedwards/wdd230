@@ -1,16 +1,8 @@
-const currentTemp = document.querySelector('#current-temp');
-const weatherIcon = document.querySelector('#weather-icon');
-const captionDesc = document.querySelector('#figcaption');
+// Coolidge AZ / 5 days every 3 hours / Imperial
+const url = 'https://api.openweathermap.org/data/2.5/forecast?lat=32.96&lon=-111.53&appid=9e9a345cc785c3c3d52dcdab0577abf6&units=imperial';
 
-const currentTempFive = document.querySelector('#current-temp-five');
-const weatherIconFive = document.querySelector('#weather-icon-five');
-const captionDescFive = document.querySelector('#figcaption-five');
-
-const url = 'https://api.openweathermap.org/data/2.5/weather?lat=32.96&lon=-111.53&appid=0ddfcd67be18cdb7785f736a4e9b004c&units=imperial'; // Added units=imperial
-
-
+// fetch url data
 async function apiFetch() {
-    // today
     try {
         const response = await fetch(url);
         if (response.ok) {
@@ -24,43 +16,42 @@ async function apiFetch() {
     }
 }
 
-
+// display url data
 function displayResults(data) {
-    const fahrenheitTemp = Math.round(data.main.temp);
 
-    var index = 0;
-    var hour = 0;
-    const fiveDaySectionElement = document.getElementById('weather-card');
+    // parent element
+    const threeDaySectionElement = document.getElementById('weather-card');
 
-    console.log("Length of data.weather:", data.weather.length);
+    // declare index
+    index = 0
 
 
-    while (index >= 0 && index <= 5 && hour < data.weather.length) {
-        var iconCode = data.weather[hour].icon;
-        const iconUrl = `https://openweathermap.org/img/w/${iconCode}.png`;
+    // create child elements 3 times
+    while (index >= 0 && index <= 16){
+        console.log(data.list[index].dt_txt);
+
+        const f = document.createElement('div');
 
         const pElement = document.createElement('p');
         const imgElement = document.createElement('img');
         const captionElement = document.createElement('p');
 
-        pElement.innerText = `${fahrenheitTemp}&deg;F`;
-        imgElement.setAttribute('src', iconUrl);
-        imgElement.setAttribute('alt', data.weather[hour].description);
-        captionElement.innerText = data.weather[hour].description;
+        pElement.innerText = data.list[index].main.temp
 
-        fiveDaySectionElement.appendChild(pElement);
-        fiveDaySectionElement.appendChild(imgElement);
-        fiveDaySectionElement.appendChild(captionElement);
+        icon = "https://openweathermap.org/img/w/" + data.list[index].weather[0].icon + ".png"
+        imgElement.setAttribute('src', icon);
 
-        // Update the hour
-        hour += 1;
+        captionElement.innerText = data.list[index].weather[0].description
 
-        // Update the index
-        index += 1;
+        f.appendChild(pElement);
+        f.appendChild(imgElement);
+        f.appendChild(captionElement);
+
+        threeDaySectionElement.appendChild(f);
+
+        index += 8
     }
 }
-
-
 
 apiFetch();
 

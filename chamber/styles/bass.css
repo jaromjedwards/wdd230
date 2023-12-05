@@ -92,11 +92,15 @@ nav a{
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin-left: 200px;
+    margin-right: 200px;
 }
 
 .weather-card{
 
+    grid-column: 1 / span 2;
+
     display: flex;
+    gap: 60px;
 
     background-color: white;
     border-style: solid;

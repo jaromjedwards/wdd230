@@ -5,7 +5,11 @@
             "links":[
                 {
                     "url": "week01/holygrail.html",
-                    "title": "week01/media-query.html"
+                    "title": "Holy Grail"
+                },
+                {
+                    "url": "week01/media-query.html",
+                    "title": "Media Query"
                 }
             ]
         },

@@ -1,9 +1,8 @@
-const url = 'https://raw.githubusercontent.com/jaromjedwards/wdd230/main/chamber/data/members.json';
-const cards = document.getElementById('directory-cards-container');
+const membersUrl = 'https://raw.githubusercontent.com/jaromjedwards/wdd230/main/chamber/data/members.json';
 
-async function getData(url) {
+async function getData(membersUrl) {
   try {
-    const response = await fetch(url);
+    const response = await fetch(membersUrl);
 
     // Check if the fetch was successful
     if (!response.ok) {
@@ -13,16 +12,26 @@ async function getData(url) {
     // Convert the response to JSON
     const data = await response.json();
 
-    // Display members if everything is successful
-    displayMembers(data.companies);
+    // Display all members on the directory page
+    if (document.body.id === 'directory'){
+      displayMembers(data.companies);
+    }
+    // Display 3 random members on the home page with Gold or Silver memberships
+    if (document.body.id === 'home-page'){
+      displayThreeRandomMembers(data.companies);
+    }
+
   } catch (error) {
     // Handle errors, you can log the error or show a user-friendly message
     console.error('Error fetching data:', error.message);
   }
 }
 
+// displays the members it is given, eiher the 3 random or all the members
 const displayMembers = (companies) => {
-  // card build code goes here
+
+  const cards = document.getElementById('directory-cards-container');
+
   companies.forEach((company) => {
 
       // card
@@ -42,11 +51,11 @@ const displayMembers = (companies) => {
       const companyPhone = document.createElement('p');
       companyPhone.textContent = `Phone: ${company.phone}`;
 
-      // URL
-      const companyUrl = document.createElement('a');
-      companyUrl.href = company.url;
-      companyUrl.textContent = 'Website';
-      companyUrl.target = '_blank'; // Open link in a new tab
+      // membersUrl
+      const companymembersUrl = document.createElement('a');
+      companymembersUrl.href = company.membersUrl;
+      companymembersUrl.textContent = 'Website';
+      companymembersUrl.target = '_blank'; // Open link in a new tab
 
       // Icon
       const companyIcon = document.createElement('img');
@@ -65,7 +74,7 @@ const displayMembers = (companies) => {
       sectionElement.appendChild(companyName);
       sectionElement.appendChild(companyAddress);
       sectionElement.appendChild(companyPhone);
-      sectionElement.appendChild(companyUrl);
+      sectionElement.appendChild(companymembersUrl);
       sectionElement.appendChild(companyIcon);
       sectionElement.appendChild(companyMembership);
       sectionElement.appendChild(companyYears);
@@ -76,6 +85,50 @@ const displayMembers = (companies) => {
   });
 }
 
+// this function randomly selects 3 members with Gold or Silver memberships, then calls displayMembers
+const displayThreeRandomMembers = (companies) => {
+  
+  // create list of gold and silver members
+  const goldMembers = [];
+  companies.forEach((company) => {
+    
+    if (company.membership === "Gold" || company.membership === "Silver"){
 
-getData(url);
+      goldMembers.push(company);
+
+    }
+
+  });
+
+  // split the list into 3 random members
+  const numberOfItemsToChoose = 3;
+  const randomItems = getRandomItems(goldMembers, numberOfItemsToChoose);
+  console.log("Randomly chosen items:", randomItems);
+  console.log(randomItems[0]);
+
+  // display the 3 random members
+  displayMembers(randomItems);
+  
+};
+
+// returns random items from a list
+function getRandomItems(arr, numItems) {
+  // Check if the array has enough items
+  if (arr.length < numItems) {
+    console.error("Array does not have enough items");
+    return null;
+  }
+
+  // Shuffle the array
+  const shuffledArray = arr.sort(() => Math.random() - 0.5);
+
+  // Get the first 'numItems' elements
+  const randomItems = shuffledArray.slice(0, numItems);
+
+  return randomItems;
+}
+
+
+
+getData(membersUrl);
 

@@ -29,7 +29,7 @@
         <!-- <meta property="fb:app_id" content="your_app_id" />
         <meta name="twitter:site" content="@website-username"> -->
 </head>
-<body onload="getYear()" onload="lastModified()">
+<body id="home-page" onload="getYear()" onload="lastModified()">
     <header id="header">
         <img class="logo" src="images/coolidge-logo.jpeg" alt="logo">
         <h1>Coolidge Chamber of Commerce</h1>
@@ -46,24 +46,23 @@
             <p class="moving-coolidge">Moving Coolidge forward as the voice of local business.</p>
             <img class="ruins-cutout" src="images/ruins-cutout.png" alt="ruins-cutout.img">
         </div>
-        <div class="content">
-
-            <div id="weather-card" class="weather-card">
-                <!-- Javascript Weather -->
-            </div>
-
-            <section class="event-section">
-                <h3>Current Events</h3>
-                <p>Current Event 1</p>
-                <p>Current Event 2</p>
-                <p>Current Event 3</p>
-            </section>
-            <section>
-                <p>Spotlight 1</p>
-                <p>Spotlight 2</p>
-                <p>Spotlight 3</p>
-            </section>
+        <p class="moving-coolidge">Our Featured Members</p>
+        <div id="directory-cards-container" class="home-page-members">
+            
+            <!-- Javascript Gold or Silver members members.js -->
         </div>
+
+        <div id="weather-card" class="weather-card">
+            <!-- Javascript Weather weather.js -->
+        </div>
+
+        <section class="event-section">
+            <h3>Current Events</h3>
+            <p>Current Event 1</p>
+            <p>Current Event 2</p>
+            <p>Current Event 3</p>
+        </section>
+
     </main>
     <footer>
         <p id="year"></p>
@@ -72,5 +71,6 @@
     <script src="scripts/getDates.js"></script>
     <script src="scripts/header.js"></script>
     <script src="scripts/coolidgeWeather.js"></script>
+    <script src="scripts/members.js" ></script>
 
 </body>

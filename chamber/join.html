@@ -29,7 +29,7 @@
         <!-- <meta property="fb:app_id" content="your_app_id" />
         <meta name="twitter:site" content="@website-username"> -->
 </head>
-<body>
+<body onload="loadTimes()">
     <header id="header">
         <img class="logo" src="images/coolidge-logo.jpeg" alt="logo">
         <h1>Coolidge Chamber of Commerce</h1>
@@ -58,7 +58,7 @@
             </fieldset>
             <fieldset>
                 <label>Membership Level
-                    <select name="subject" id="">
+                    <select name="subject">
                             <option value="">Select a Membership Level</option>
                         <option value="">Non-Profit Membership</option>
                         <option value="">Bronze Membership</option>

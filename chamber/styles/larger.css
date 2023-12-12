@@ -1,36 +1,55 @@
 @media screen and (max-width: 840px) {
 
+    .top{
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+    header{
+        padding: 0;
+    }
+    nav a{
+        padding: 10px;
+    }
+    .ruins-cutout{
+        align-self: center;
+    }
+    .home-page-members{
+        flex-direction: column;
+    }
+    .event-card-container{
+        grid-template-rows: 150px 800px 800px 800px;
+    }
+    .event-card{
+        margin: 0;
 
-    .discover-sidebar{
-        grid-column: 2;
-        grid-row: 2;
-        position: relative;
+        display: flex;
+        flex-direction: column;
+        margin: 20px;
+    }
+
+    .event-card img{
+        width: 80%;
+    }
+
+    .discover-main{
         display: grid;
-        margin-top: 0;
-    }
-
-    .discover-sidebar p{
-        grid-row: 1;
-    }
-
-    .discover-sidebar img{
-        grid-row: 2;
-        width: 150px;
     }
 
     .discover-images{
-        padding-right: 100px;
+        grid-column: 1;
     }
+
     .discover-images p{
-        margin-left: 300px;
+        margin-left: 50%;
     }
 
-    .discover-main h2{
-        margin: 100px;
-    }
+    .discover-sidebar{
+        display: flex;
+        flex-direction: row;
+        position: relative;
 
-    .discover-images img:hover{
-        transform: none;
+        grid-column: 1;
     }
 
     .membership-cards{

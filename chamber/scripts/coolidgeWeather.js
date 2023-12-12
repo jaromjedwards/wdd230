@@ -28,13 +28,20 @@ function displayResults(data) {
 
     // create child elements 3 times
     while (index >= 0 && index <= 16){
-        console.log(data.list[index].dt_txt);
-
         const f = document.createElement('div');
 
+        const dElement = document.createElement('p');
         const pElement = document.createElement('p');
         const imgElement = document.createElement('img');
         const captionElement = document.createElement('p');
+
+        const timestamp = (data.list[index].dt);
+        let date = new Date(timestamp * 1000); // Convert seconds to milliseconds
+
+        let monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+        const formattedDate = `${monthNames[date.getUTCMonth()]} ${date.getUTCDate()} ${date.getUTCFullYear()}`;
+        dElement.innerText = formattedDate;
+        console.log(date);
 
         pElement.innerText = data.list[index].main.temp
 
@@ -43,6 +50,7 @@ function displayResults(data) {
 
         captionElement.innerText = data.list[index].weather[0].description
 
+        f.appendChild(dElement);
         f.appendChild(pElement);
         f.appendChild(imgElement);
         f.appendChild(captionElement);

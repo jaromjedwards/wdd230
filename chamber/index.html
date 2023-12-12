@@ -29,7 +29,16 @@
         <!-- <meta property="fb:app_id" content="your_app_id" />
         <meta name="twitter:site" content="@website-username"> -->
 </head>
-<body id="home-page" onload="getYear()" onload="lastModified()">
+<body id="home-page" class="home-page" onload="loadTimes(); handleCorrectDays()">
+    <div class="bannar" id="bannar-js">
+        <div class="bannar-content">
+            <p class="bannar-text">Attend the Chamber of Commerce meet and greet this Wednesday at 7:00 p.m.!
+                <button class="bannar-button" type="button" onclick="handleBannarButton()">
+                <img src="images/close-icon.png" alt="close-icon">
+                </button>
+            </p>
+        </div>
+    </div>
     <header id="header">
         <img class="logo" src="images/coolidge-logo.jpeg" alt="logo">
         <h1>Coolidge Chamber of Commerce</h1>
@@ -47,21 +56,36 @@
             <img class="ruins-cutout" src="images/ruins-cutout.png" alt="ruins-cutout.img">
         </div>
         <p class="moving-coolidge">Our Featured Members</p>
+
         <div id="directory-cards-container" class="home-page-members">
-            
             <!-- Javascript Gold or Silver members members.js -->
         </div>
-
+        <p class="moving-coolidge">Weather</p>
         <div id="weather-card" class="weather-card">
-            <!-- Javascript Weather weather.js -->
+            <!-- Javascript Weather coolidgeWeather.js -->
         </div>
 
-        <section class="event-section">
-            <h3>Current Events</h3>
-            <p>Current Event 1</p>
-            <p>Current Event 2</p>
-            <p>Current Event 3</p>
-        </section>
+        <div class="event-card-container">
+            <p class="moving-coolidge">Current Events</p>
+            <div class="event-card">
+                <p class="event-title">Holiday Lights Contest</p>
+                <p class="event-date">Monday December 4th</p>
+                <p class="event-description">🌟 Brighten up your neighborhood in our Holiday Lights Competition! Showcase your festive creativity and vie for recognition in categories like traditional elegance, Santa's Workshop, technicolor dream, winter wonderland, and out-of-this-world displays. To enter, deck out your home, capture a photo or video, and share your masterpiece. Judging will focus on creativity, festive spirit, visual impact, and overall presentation. Let's light up the season together and spread joy throughout the community! 🎄✨ </p>
+                <img src="https://www.nj.com/resizer/50MlfTl5gEdQkTvVLkBskyoS2cY=/1280x0/smart/cloudfront-us-east-1.images.arcpublishing.com/advancelocal/SDB6RFBKVFDBFJJF4Q27QK34GI.JPG" alt="contest picture">
+            </div>
+            <div class="event-card">
+                <p class="event-title">Town Council Meeting</p>
+                <p>Monday December 11th</p>
+                <p class="event-description">🏛️ Embrace community involvement at the upcoming Town Council Meeting! Join us for an essential gathering at the City Hall. The agenda will cover significant topics, offering you the chance to contribute thoughts on matters affecting our community. Whether attending in person or virtually, your voice is crucial in shaping the future of our town. Let's collaborate to build an even stronger community together! 🤝 </p>
+                <img src="images/coolidge_city_hall.jpeg" alt="coolidge city hall">
+            </div>            
+            <div class="event-card">
+                <p class="event-title">Winery Live Music</p>
+                <p>Wednesday December 13th</p>
+                <p class="event-description">🍇🎶 Experience the perfect blend of wine and live music at the Windmill Winery! Join us for an enchanting evening filled with melodious tunes and exquisite wines in the heart of Coolidge. Our talented musicians will serenade you as you savor our finest selections of wines. Whether you're a wine enthusiast or a music lover, this event is crafted for you. Unwind, sip, and let the music transport you to a world of relaxation. Mark your calendars for an unforgettable night of sensory delights! 🍷🎵 </p>
+                <img src="https://static.wixstatic.com/media/65c57d_6a3c9fbd49ea4c8c87ebd4150dbc5859~mv2.jpg/v1/fill/w_580,h_420,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Windmill%20Winery%20Tasting%20Room%20WAN_7588.jpg" alt="windmill winery">
+            </div>        
+        </div>
 
     </main>
     <footer>
@@ -72,5 +96,6 @@
     <script src="scripts/header.js"></script>
     <script src="scripts/coolidgeWeather.js"></script>
     <script src="scripts/members.js" ></script>
+    <script src="scripts/bannar.js"></script>
 
 </body>

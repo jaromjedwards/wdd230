@@ -3,24 +3,34 @@ function getYear() {
   const currentYear = currentDate.getFullYear();
 
   const yearElement = document.getElementById('year');
-  yearElement.innerText = `©${currentYear} Jarom Edwards - Arizona`;
+  if (yearElement !== null) {
+    yearElement.innerText = `©${currentYear} Jarom Edwards - Arizona`;
+  }
 }
 
-function lastModified(){
+function lastModified() {
   let lastModified = new Date(document.lastModified);
   let date = lastModified.toLocaleDateString();
   const lastModifiedElement = document.getElementById('lastModified');
-  lastModifiedElement.innerText = `Last Modified: ${date}`;
+  if (lastModifiedElement !== null) {
+    lastModifiedElement.innerText = `Last Modified: ${date}`;
+  }
 }
 
-function getTime(){
+function getTime() {
   let currentDate = new Date();
 
   var hours = currentDate.getHours();
   var minutes = currentDate.getMinutes();
   var seconds = currentDate.getSeconds();
+  if (document.getElementById('current-time') !== null) {
+    const currentTimeElement = document.getElementById('current-time');
+    currentTimeElement.innerText = `Form Loaded at ${hours}:${minutes}:${seconds}`;
+  }
+}
 
-  const currentTimeElement = document.getElementById('current-time');
-  currentTimeElement.innerText = `Form Loaded at ${hours}:${minutes}:${seconds}`;
-
+function loadTimes(){
+  getYear();
+  lastModified();
+  getTime();
 }

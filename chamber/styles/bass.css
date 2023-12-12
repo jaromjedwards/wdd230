@@ -21,7 +21,9 @@ header {
     padding: 1rem;
     align-items: center;
     background: linear-gradient(to bottom, var(--background-color), rgba(255, 255, 255, 0));
+
     position: fixed;
+
     width: 100%;
     z-index: 1;
     padding-left: 160px;
@@ -58,7 +60,7 @@ nav a{
     grid-template-columns: 1fr 1fr;
     margin-left: 200px;
     margin-top: 50px;
-    grid-template-rows: 10px 200px 200px;
+    grid-template-rows: 200px 150px;
 }
 .moving-coolidge{
     color: black;
@@ -99,6 +101,8 @@ nav a{
     border-style: solid;
     border-color: black;
     justify-content: center;
+    text-align: center;
+
 }
 
 footer{
@@ -338,9 +342,70 @@ ul {
     border-style: solid;
     padding: 40px;
     text-align: center;
+    margin-bottom: 50px;
 }
 .home-page-members section:hover{
     color:  #E6AA68;
     background-color: #242038;
     transform: translateY(-7px);
+}
+.event-card-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr 2fr 2fr;
+
+}
+
+.event-card{
+    display: grid;
+    grid-template-columns: 500px 400px;
+    grid-template-rows: 90px 30px 100px;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-bottom: 50px;
+    border-style: solid;
+    padding-left: 100px;
+}
+.event-card h1{
+    grid-column: 1;
+    grid-row: 1;
+
+    font-size: 40px;
+}
+
+.event-date{
+    grid-column: 1;
+    grid-row: 2;
+}
+.event-description{
+    grid-column: 1;
+    grid-row: 3;
+    padding-right: 100px;
+}
+
+.event-card img{
+    margin-top: 30px;
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    width: 100%;
+}
+
+.bannar{
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 3;
+    background-color: palegoldenrod;
+    font-family: 'Gilda Display',Georgia,"Times New Roman",serif;
+}
+
+.empty-bannar{
+    display: none;
+}
+
+.event-title{
+    font-size: 40px;
+    font-family: 'Gilda Display',Georgia,"Times New Roman",serif;
 }
